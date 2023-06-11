@@ -2,14 +2,14 @@ using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Publisher.Console.Configurations;
+namespace Publisher.RabbitMq.Configurations;
 
 public static class MassTransitRegister
 {
   // ps: come from config
-  private const string busHost = "amqps://localhost:5672/";
-  private const string busUsername = "guest";
-  private const string busPassword = "guest";
+  private const string BusHost = "amqps://localhost:5672/";
+  private const string BusUsername = "guest";
+  private const string BusPassword = "guest";
 
   public static void RegisterMassTransit(this IServiceCollection serviceCollection, IConfiguration configuration)
   {
@@ -18,10 +18,10 @@ public static class MassTransitRegister
       // init bus
       x.UsingRabbitMq((context, cfg) =>
       {
-        cfg.Host(new Uri(busHost), a =>
+        cfg.Host(new Uri(BusHost), a =>
         {
-          a.Username(busUsername);
-          a.Password(busPassword);
+          a.Username(BusUsername);
+          a.Password(BusPassword);
         });
       });
     });

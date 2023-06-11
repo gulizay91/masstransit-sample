@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Consumer.Console.Configurations;
+using Consumer.RabbitMq.Configurations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,7 +14,8 @@ var hostBuilder = new HostBuilder()
   )
   .ConfigureServices((hostContext, services) =>
   {
-    services.Configure<HostOptions>(opts => opts.ShutdownTimeout = TimeSpan.FromSeconds(45)); // Wait for graceful shutdown.
+    services.Configure<HostOptions>(opts =>
+      opts.ShutdownTimeout = TimeSpan.FromSeconds(45)); // Wait for graceful shutdown.
     services.RegisterLoggers(hostContext.Configuration);
     services.RegisterMassTransit(hostContext.Configuration);
   })

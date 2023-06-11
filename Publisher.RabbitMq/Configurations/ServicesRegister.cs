@@ -1,12 +1,12 @@
 using Microsoft.Extensions.DependencyInjection;
-using Publisher.Console.Services;
+using Publisher.RabbitMq.Services;
 
-namespace Publisher.Console.Configurations;
+namespace Publisher.RabbitMq.Configurations;
 
 public static class ServicesRegister
 {
   public static void RegisterServices(this IServiceCollection serviceCollection)
   {
-    serviceCollection.AddScoped<ITObjectService, TObjectService>();
+    serviceCollection.AddScoped<IObjectService, ObjectService>();
   }
 }

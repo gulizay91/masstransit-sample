@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher.Console", "Publisher.Console\Publisher.Console.csproj", "{194AA0A1-D7E9-4FA3-AD54-BA7D6467467B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher.RabbitMq", "Publisher.RabbitMq\Publisher.RabbitMq.csproj", "{194AA0A1-D7E9-4FA3-AD54-BA7D6467467B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.Console", "Consumer.Console\Consumer.Console.csproj", "{23ED8DF1-E2F5-4A38-98BF-A0A9D0303437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer.RabbitMq", "Consumer.RabbitMq\Consumer.RabbitMq.csproj", "{23ED8DF1-E2F5-4A38-98BF-A0A9D0303437}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Contracts", "Shared.Contracts\Shared.Contracts.csproj", "{C34FE283-3E0C-4795-8FD3-B4A81E3575CE}"
 EndProject

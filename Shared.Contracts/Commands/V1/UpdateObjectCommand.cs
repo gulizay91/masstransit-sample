@@ -2,8 +2,8 @@ using Shared.Contracts.Common;
 
 namespace Shared.Contracts.Commands.V1;
 
-public class CreateTObjectCommand : ICommand
+public record UpdateObjectCommand : ICommand
 {
+  public required string ReplaceObjectName { get; init; }
   public Guid CorrelationId { get; set; }
-  public string ObjectName { get; init; }
 }
